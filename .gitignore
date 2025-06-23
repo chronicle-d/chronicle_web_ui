@@ -1,8 +1,8 @@
-chronicle_web_ui/node_modules/
-chronicle_web_ui/package-lock.json
-chronicle_web_ui/.next/
-chronicle_web_ui/.turbo/
-chronicle_web_ui/.eslintcache
+node_modules/
+package-lock.json
+.next/
+.turbo/
+.eslintcache
 
 # Log files and environment
 *.log
