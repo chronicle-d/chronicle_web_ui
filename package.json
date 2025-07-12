@@ -2,7 +2,7 @@
   "name": "chronicle-web-ui",
   "version": "1.0.0",
   "scripts": {
-    "dev": "bash -c '! ss -ltn | grep \":3000 \" && next dev &> /dev/null || { echo -e \" \\e[1m\\e[31m[!]\\e[0m \\e[1m[SERVICE_]:\\e[0m Port 3000 is in use! (NPM server)\" >&2; exit 1; }'",
+    "dev": "bash -c 'if ss -ltn | grep -q \":3000\"; then echo -e \" \\e[1m\\e[31m[!]\\e[0m \\e[1m[SERVICE_]:\\e[0m Port 3000 is in use! (NPM server)\" >&2; exit 1; else next dev; fi'",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
